@@ -69,7 +69,7 @@ void loop() {
       startReading = true; // change to reading mode
       digitalWrite(LED_BUILTIN, HIGH); // on the onboard LED, for visual indicator  
       Serial.println("Start Sensor Read ----- ");
-    } else { // currently in reading mode, should should reading and brake DC brushed motor
+    } else { // currently in reading mode, should stop reading and brake DC brushed motor
       pusherESC.writeMicroseconds(THROTTLE_BAKE); // brake DC brushed motor
       startReading = false; // change to stop reading mode
       throttle = THROTTLE_BAKE;
